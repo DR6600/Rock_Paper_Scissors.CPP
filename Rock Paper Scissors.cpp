@@ -151,10 +151,9 @@ void PlayGame()
 {
 	stRoundInfo RoundInfo;
 	stGameResults GameResults;
-	short Rounds = ReadNumber(1, 10, "How many rounds do you want to play ? (1 - 10) \n");
-	GameResults.GameRounds = Rounds;
+	GameResults.GameRounds = ReadNumber(1, 10, "How many rounds do you want to play ? (1 - 10) \n");
 	
-	for (short X = 1; X <= Rounds; X++)
+	for (short X = 1; X <= GameResults.GameRounds; X++)
 	{
 		FillRoundInfo(RoundInfo);
 		PrintRoundInfo(RoundInfo);
