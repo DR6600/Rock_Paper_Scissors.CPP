@@ -152,13 +152,12 @@ void PlayGame()
 	stRoundInfo RoundInfo;
 	stGameResults GameResults;
 	short Rounds = ReadNumber(1, 10, "How many rounds do you want to play ? (1 - 10) \n");
-
+	GameResults.GameRounds = Rounds;
+	
 	for (short X = 1; X <= Rounds; X++)
 	{
 		FillRoundInfo(RoundInfo);
 		PrintRoundInfo(RoundInfo);
-
-		GameResults.GameRounds = X;
 
 		if (RoundInfo.Winner == Player)
 			GameResults.PlayerWinTimes++;
